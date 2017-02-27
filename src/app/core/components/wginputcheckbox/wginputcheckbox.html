@@ -1,0 +1,18 @@
+<div class="row form-row wgInputCheckbox">
+	<fieldset>
+		<legend class="sr-only">{{wgElementSchema.label}}</legend>
+		<label class="form-label col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-4">{{wgElementSchema.label}}
+		<small class="sub-label text-muted helptext">{{wgElementSchema.helpText}}</small></label>
+		<div class="col-sm-offset-1 col-sm-10 col-md-offset-0 {{cssClass}}">
+			<label  class="checkbox" *ngFor="let option of wgElementSchema.options">
+				<input class="checkbox-input" type="checkbox"  name="{{option.id}}"   [(ngModel)]="option.checked" (change) = onChange()>
+				<span class=" col-xs-12 checkbox-text top-span-padder" >{{option.label}} </span>
+				<!--<small class="col-xs-12 sub-label text-muted labelHelpText" ng-if="option.labelHelpText">{{option.labelHelpText}}</small> -->
+			</label>
+			
+		<!--	<input type="text" name="{{wgElementSchema.id}}" id="{{wgElementSchema.id}}" class="hidden" ng-model="wgElementSchema.value" ng-required="{{wgElementSchema.required || false}}" >
+			<div wg-input-error ng-if="inputModelCtrl" model-controller="inputModelCtrl" data-error-map="wgElementSchema.errorMap"></div>-->
+		</div>
+	</fieldset>
+</div>
+

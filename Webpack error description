@@ -1,0 +1,2 @@
+Error ::: TypeError: content.indexOf is not a function
+Solution ::: use script correctly
